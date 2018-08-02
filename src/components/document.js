@@ -1,35 +1,35 @@
 import React, { Component } from 'react';
-import './style.scss';
+import './style.css';
 import { Route, Switch,NavLink} from 'react-router-dom';
 
 class Document extends Component{
 	constructor(){
 		super()
 		// this.state = {
-		// 	display:"block"
+		// 	display:
 		// }
 		// this.handleclick = this.handleclick.bind(this);
 	}
 	// handleclick(e){
-	// 	if(this.state.display = "block"){
+	// 	if(this.state.display = ){
 	// 		this.setState({
-	// 			display: "none"
+	// 			display: 
 	// 		})
-	// 	}else if(this.state.display = "none"){
+	// 	}else if(this.state.display = ){
 	// 		this.setState({
-	// 				display: "block"
+	// 				display: 
 	// 		})
 	// 	}
-	// }
+	//}
 	render(){
 	
-
+			// let s = {display:this.state.display};
 		return (
-			 <div onClick={this.handleclick}>
+			 <div>
 			 
-				 
-				 <ul className="list">
-				 	编码规范 >
+				
+				 <ul className="list" >
+				 	 编码规范 >
 					<li><NavLink to="/document/sql" activeClassName="likes">SQL规范</NavLink></li>
 					<li><NavLink to="/document/java" activeClassName="likes">Java基础开发规范</NavLink></li>
 					<li><NavLink to="/document/javabackend" activeClassName="likes">Java后端服务开发规范</NavLink></li>
