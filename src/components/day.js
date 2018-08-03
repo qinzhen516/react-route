@@ -10,7 +10,7 @@ class Day extends Component{
 		return (
 			<div>
 			
-				<ul className="list">
+				<ul className="list list2">
 					<li><NavLink to="/day/backend" activeClassName="likes">后端</NavLink></li>
 					<li><NavLink to="/day/front-end" activeClassName="likes">前端</NavLink></li>
 					<li><NavLink to="/day/mobile" activeClassName="likes">移动中心</NavLink></li>

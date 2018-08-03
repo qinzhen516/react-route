@@ -2,34 +2,45 @@ import React, { Component } from 'react';
 import './style.css';
 import { Route, Switch,NavLink} from 'react-router-dom';
 
+
 class Document extends Component{
 	constructor(){
 		super()
-		// this.state = {
-		// 	display:
-		// }
-		// this.handleclick = this.handleclick.bind(this);
+		this.state = {
+			flage : false
+		}
+		this.handleclick = this.handleclick.bind(this);
 	}
-	// handleclick(e){
-	// 	if(this.state.display = ){
-	// 		this.setState({
-	// 			display: 
-	// 		})
-	// 	}else if(this.state.display = ){
-	// 		this.setState({
-	// 				display: 
-	// 		})
-	// 	}
-	//}
+	handleclick(e){
+		this.setState({
+			flage: !this.state.flage
+		})
+		// console.log(this.state.flage);
+	}
 	render(){
 	
-			// let s = {display:this.state.display};
+			let html = this.state.flage ? <List /> : "" ;
 		return (
-			 <div>
-			 
+			<div className="box">
+				  <span onClick={this.handleclick}>编码规范 ></span>
+				  {html}
 				
-				 <ul className="list" >
-				 	 编码规范 >
+			 	
+			</div>
+			)
+        
+	}
+}
+
+class List extends Component{
+	constructor(){
+		super();
+	}
+	render(){
+		return(
+			<div>
+				<ul className="list" >
+					
 					<li><NavLink to="/document/sql" activeClassName="likes">SQL规范</NavLink></li>
 					<li><NavLink to="/document/java" activeClassName="likes">Java基础开发规范</NavLink></li>
 					<li><NavLink to="/document/javabackend" activeClassName="likes">Java后端服务开发规范</NavLink></li>
@@ -51,11 +62,9 @@ class Document extends Component{
 
 					</Switch> 
 				</div>
-             </div>
-			)
-        
+			</div>
+				
+		)
 	}
 }
-
-
 export default Document
